@@ -81,17 +81,16 @@ class Lock extends Game {
         this.ctx.beginPath();
         this.ctx.arc(this.pos.x, this.pos.y + 47, 46, 0, Const.TWO_PI);
         this.ctx.stroke();
-        this.ctx.fillStyle = "#1a0096"; //"blue";
+        this.ctx.fillStyle = "#1a0096";
         this.ctx.beginPath();
         this.ctx.arc(this.pos.x + 46 * this.aimPos.x, this.pos.y + 47 + 46 * this.aimPos.y, 5, 0, Const.TWO_PI);
         this.ctx.fill();
         this.ctx.save();
-        this.ctx.beginPath()
+        this.ctx.beginPath();
         this.ctx.fillStyle = "#970000";
-        "red";
         this.ctx.translate(this.pos.x + this.pinPos.x * 46, 47 + this.pos.y + this.pinPos.y * 46);
-        this.ctx.rotate(this.pinAng)
-        this.ctx.fillRect(-6, -2, 12, 4)
+        this.ctx.rotate(this.pinAng);
+        this.ctx.fillRect(-6, -2, 12, 4);
         this.ctx.stroke();
         this.ctx.restore();
 
@@ -99,7 +98,6 @@ class Lock extends Game {
         this.ctx.textAlign = "center";
         this.ctx.font = "50px 'Press Start 2P'";
         this.ctx.fillText(`${this.count}`, Const.WIDTH >> 1, Const.HEIGHT * .95);
-
         this.ctx.font = "20px 'Press Start 2P'";
         this.ctx.fillText(`SCORE: ${this.score}`, Const.WIDTH >> 1, Const.HEIGHT * .1);
 
@@ -132,7 +130,6 @@ class Lock extends Game {
                 }
                 if (this.crossed && diff > 9) {
                     this.state = Const.SHAKE;
-                    //console.log(diff, 2);
                 }
                 break;
             case Const.OPEN:
@@ -160,15 +157,13 @@ class Lock extends Game {
                         this.state = Const.CREATE;
                     }
                 } else {
-                    //console.log(dif, 1, this.crossed);
                     this.state = Const.SHAKE;
                 }
                 break;
             case Const.SHAKE:
                 if ((this.shakeTime -= dt) < 0) {
                     this.shakeTime = .75;
-                    this.pos.x = this.orig.x;
-                    this.pos.y = this.orig.y;
+                    this.pos.set(this.orig.x, this.orig.y);
                     this.state = Const.GAMEOVER;
                     return;
                 }
