@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+* {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 0;
+    border: 0;
+    background-color: #222;
+    text-align: center;
+}
+
+canvas {
+    margin: 50px auto;
+    border: 4px solid white;
+}
