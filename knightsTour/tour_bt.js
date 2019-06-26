@@ -1,5 +1,5 @@
 //--------------------------------------------------------------
-// knight's tour (Backtracking) by P. Jorente
+// knight's tour (Backtracking) by Poncho81
 //--------------------------------------------------------------
 class KnightTour {
 	constructor() {
