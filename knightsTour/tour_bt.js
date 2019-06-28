@@ -13,7 +13,7 @@ class KnightTour {
 			y: 0
 		};
 		this.ctx = null;
-		this.step = (this.width / this.cellCount);
+		this.step = this.width / this.cellCount;
 		this.lastTime = 0;
 		this.wait;
 		this.delay;
