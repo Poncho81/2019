@@ -13,7 +13,7 @@ class KnightTour {
 			y: 0
 		};
 		this.ctx = null;
-		this.step = Math.floor(this.width / this.cellCount);
+		this.step = (this.width / this.cellCount);
 		this.lastTime = 0;
 		this.wait;
 		this.delay;
@@ -32,16 +32,19 @@ class KnightTour {
 	}
 
 	drawBoard() {
-		let a = false;
-		for (let y = 0; y < this.height; y += this.step) {
-			for (let x = 0; x < this.width; x += this.step) {
+		let a = false,
+			xx, yy;
+		for (let y = 0; y < this.cellCount; y++) {
+			for (let x = 0; x < this.cellCount; x++) {
 				if (a) {
 					this.ctx.fillStyle = "#607db8";
 				} else {
 					this.ctx.fillStyle = "#aecaf0";
 				}
 				a = !a;
-				this.ctx.fillRect(x, y, x + this.step, y + this.step);
+				xx = x * this.step;
+				yy = y * this.step;
+				this.ctx.fillRect(xx, yy, xx + this.step, yy + this.step);
 			}
 			if (!(this.cellCount & 1)) a = !a;
 		}
@@ -107,7 +110,7 @@ class KnightTour {
 		this.cellCount = parseInt(document.getElementById("cellCount").value);
 		this.size = Math.floor(this.width / this.cellCount)
 		this.wait = this.delay = parseInt(document.getElementById("delay").value);
-		this.step = this.width / this.cellCount;
+		this.step = (this.width / this.cellCount);
 		this.ctx.font = this.size + "px Arial";
 
 		document.getElementById("log").innerText = "";
