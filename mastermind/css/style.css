@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: #222;
+  text-align: left
+}
+
+button {
+  width: 101px;
+  height: 26px;
+  background-color: #444;
+  color: #ddd;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+input,
+select {
+  float: right;
+  width: 60px;
+  height: 24px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+#palette {
+  margin-top: 40px;
+  width: 233px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+#ctrls {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 10px;
+  font-size: 20px;
+  width: 233px;
+  line-height: 36px;
+  color: #fff;
+}
+
+#gameover {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  font-size: 100px;
+  text-align: center;
+  color: rgb(248, 143, 4);
+  background: rgba(34, 34, 34, .8);
+  padding: 10px;
+  z-index: 999;
+}
+
+.column,
+.columnS {
+  float: left;
+  width: 249px;
+  margin: 30px;
+}
+
+.columnS {
+  width: 300px;
+  margin-left: 0;
+}
+
+.bucket {
+  float: left;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  font-size: 26px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid #d00;
+}
+
+.pin {
+  float: left;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 2px;
+}
