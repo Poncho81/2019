@@ -61,9 +61,9 @@ class KnightTour {
 				a = this.path[v].pos.x * this.step + s;
 				b = this.path[v].pos.y * this.step + s;
 				this.ctx.lineTo(a, b);
-				this.ctx.stroke();
 				this.ctx.fillRect(a - 5, b - 5, 10, 10);
 			}
+			this.ctx.stroke();
 		}
 	}
 
