@@ -1,0 +1,14 @@
+{
+  "name": "dots_and_boxes",
+  "version": "1.0.0",
+  "description": "simple board game",
+  "main": "./dist/dab.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Poncho81",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
